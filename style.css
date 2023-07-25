@@ -204,26 +204,33 @@ margin-top: var(--flow-space, 2rem);
     margin: 0.5rem;
     
 }
+.section-link{
+    text-decoration: none;
+    color: hsl(var(--clr-white));
+    font-weight: 600;
+}
 .contact-link{
-    border-radius: 2em; 
+    border: 1px solid hsl(var(--clr-gold));
+    border-radius: 5em; 
+
     /* margin-bottom: 15rem; */
 }
 
 .nav--visible {
     background-color: hsl(var(--clr-very-dark), 0.99);
     backdrop-filter: blur(93px);
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     visibility: visible;
     position: absolute;
-    z-index: 1 !important;
+    /* z-index: 1 !important; */
     right: 0;
     top: 60px;
-    left: 0;
+    /* left: 0; */
     bottom: 0;
 
     
