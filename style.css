@@ -240,6 +240,35 @@ margin-top: var(--flow-space, 2rem);
     --gap: 1.9rem;
     justify-content: center;
 }
+
+/* hover effect for socials */
+.box-one,.box-two{
+    width: 3.125rem;
+    height: 3.125rem;
+    position: absolute;
+    transition: 600ms ease;
+}
+.box-one{
+    opacity: 1;
+    visibility: visible;
+}
+.box-two{
+    opacity: 0;
+    visibility: hidden;
+}
+.social-wrapper{
+    width: 3.125rem;
+    
+    display: inline-block;
+}
+.social-wrapper:hover .box-one{
+    opacity: 0;
+    visibility: hidden;
+}
+.social-wrapper:hover .box-two{
+    opacity: 1;
+    visibility: visible;
+}
 .hero-text{
     flex-direction: column;
     justify-content: center;
