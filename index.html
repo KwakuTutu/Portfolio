@@ -19,15 +19,24 @@
               <img src="images/logo.svg" alt="SAMUEL YIADOM">
             </a>
         
-            <button class="nav-toggle"><span class="hamburger"><img src="images/hamburger-menu.svg" alt="menu"></span></button>
+            <!-- <button class="nav-toggle"><span class="hamburger"><img src="images/hamburger-menu.svg" alt="menu"></span></button> -->
+
+
+            <button class="nav-toggle">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
         
             <nav class="nav text-white">
                 <ul>
-                    <li><a class="section-link" href="#home">Home</a></li>
-                    <li><a class="section-link"href="#what-i-do">Services</a></li>
-                    <li><a class="section-link"href="#tools-i-use">Tools</a></li>
-                    <li><a class="section-link"href="#featured-works">Portfolio</a></li>
-                    <li class=""><a href="#lets-connect" class="section-link contact-link">Contact me</a></li>
+                    <li><a class="section-link" onclick="closeMenu()" href="#home">Home</a></li>
+                    <li><a class="section-link" onclick="closeMenu()" href="#what-i-do">Services</a></li>
+                    <li><a class="section-link" onclick="closeMenu()" href="#tools-i-use">Tools</a></li>
+                    <li><a class="section-link" onclick="closeMenu()" href="#featured-works">Portfolio</a></li>
+                    <li><a href="#lets-connect" class="section-link contact-link" onclick="closeMenu()">Contact me</a></li>
                     
                     
                     
