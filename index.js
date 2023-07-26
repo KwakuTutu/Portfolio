@@ -40,6 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         });
       });
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section-animate');
       
+        function checkInView() {
+          sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+      
+            if (sectionTop < windowHeight - 100) {
+              section.classList.add('animate');
+            }
+          });
+        }
+      
+        window.addEventListener('scroll', checkInView);
+      });
+         
 
       

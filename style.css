@@ -430,9 +430,18 @@ contact-link:active{
     justify-content: center;
     align-items: center;
     
-    padding-bottom: 2.5rem;
+    padding-block: 2.5rem;
 
 }
+.section-animate{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @media (min-width:700px) {
     
