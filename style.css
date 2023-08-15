@@ -239,9 +239,7 @@ margin-top: var(--flow-space, 2rem);
     padding: 1rem;
     border: 1px solid hsl(var(--clr-gold));
     border-radius: 5em; 
-    
-
-    /* margin-bottom: 15rem; */
+    transition: background 0.3s ease;
 }
 .contact-link:hover,
 .contact-link:focus,
@@ -272,7 +270,7 @@ contact-link:active{
     
 }
 .hero{
-    padding-block: 7rem;
+    padding-block: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,20 +318,31 @@ contact-link:active{
 .view-resume{
     cursor: pointer;
     align-self: center;
-    width: 50%;
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     margin-top: 1rem;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     background: none;
-    border-radius: 1.5625rem;
+    border-radius: 2rem;
     border: 1px solid hsl(var(--clr-gold));
+    transition: background 0.3s ease;
     
 }
 .view-resume span{
     display: flex;
+}
+
+.view-resume:hover,
+.view-resume:focus,
+.view-resume:active{
+    /* border: none; */
+    background-color: hsl(var(--clr-very-dark));
+    font-weight: 600;
+}
+.view-resume span:hover{
+    visibility: hidden;
 }
 
 .sections{
@@ -348,8 +357,9 @@ contact-link:active{
 
 }
 .what-i-do-card{
+    min-width: 30%;
     
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     flex-direction: column;
     --gap:1.5rem;
     align-items: center;
@@ -447,8 +457,10 @@ contact-link:active{
     
 }
 @media (min-width:1000px) {
-    .desktop-nav{
+    .row{
         display: flex;
+        flex-direction: row;
+
         justify-content: space-between;
         align-items: center;
     }
@@ -480,6 +492,39 @@ contact-link:active{
     .contact-link{
         padding: 0.5rem 1.5rem;
     }
+    .socials{
+        flex-direction: column;
+
+    }
+    .social-wrapper{
+        height: 3.125rem;
+
+    }
+    .desktop-header-image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-text{
+        width: 70%;
+        order: -1;
+        text-align: left;
+    }
+    .hero-text h1{
+        font-size: var(--fs-700);
+    }
+    .hero-text p{
+        font-size: var(--fs-400);
+        
+    }
+    .hero-text h2{
+        font-size: var(--fs-600);
+    }
+    .view-resume{
+        font-size: var(--fs-300);
+        align-self: flex-start;
+    }
+    
     
     
 }
