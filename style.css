@@ -85,7 +85,7 @@ picture{
 .container{
     padding-inline: 2.5em;
     margin: auto;
-    max-width: 90rem;
+    max-width: 80rem;
     position: relative;
     
 }
@@ -220,13 +220,14 @@ margin-top: var(--flow-space, 2rem);
     list-style: none;
     padding: 0.5em;
     margin: 1rem;
-    font-weight: 600;
+    
     
     
 }
 .section-link{
     text-decoration: none;
     color: hsl(var(--clr-white));
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 .section-link:hover,
@@ -237,16 +238,16 @@ margin-top: var(--flow-space, 2rem);
 .contact-link{
     display: flex;
     padding: 1rem;
-    border: 1px solid hsl(var(--clr-gold));
+    background-color: hsl(var(--clr-gold));
     border-radius: 5em; 
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
 }
 .contact-link:hover,
 .contact-link:focus,
 contact-link:active{
     border: none;
-    background-color: hsl(var(--clr-gold));
-    color: hsl(var(--clr-dark));
+    background-color: hsl(var(--clr-gold), 0.6);
+    color: hsl(var(--clr-white));
 }
 
 .nav--visible {
@@ -316,34 +317,15 @@ contact-link:active{
     --gap: 0.5rem;
 }
 .view-resume{
-    cursor: pointer;
     align-self: center;
     display: flex;
-    padding: 1rem 1rem;
+    padding-block: 1rem;
     margin-top: 1rem;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    background: none;
-    border-radius: 2rem;
-    border: 1px solid hsl(var(--clr-gold));
-    transition: background 0.3s ease;
     
 }
-.view-resume span{
-    display: flex;
-}
 
-.view-resume:hover,
-.view-resume:focus,
-.view-resume:active{
-    /* border: none; */
-    background-color: hsl(var(--clr-very-dark));
-    font-weight: 600;
-}
-.view-resume span:hover{
-    visibility: hidden;
-}
 
 .sections{
     padding-block: 2.5rem;
@@ -404,8 +386,7 @@ contact-link:active{
     --gap:0.5rem
 }
 .featured-works-card-link{
-    text-decoration: none;
-    border-bottom: 1px solid hsl(var(--clr-gold));
+    margin-top: 2.5rem;
     align-self: flex-start;
 }
 .featured-works-card-link span{
@@ -436,11 +417,19 @@ contact-link:active{
 }
 
 .footer{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
     padding-block: 2.5rem;
+
+}
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid hsl(var(--clr-very-dark));
+}
+.footer-div p{
+    align-self: center;
+    order: -1;
 
 }
 .section-animate{
@@ -481,13 +470,13 @@ contact-link:active{
     }
     .nav ul li{
         align-self: center;
-        margin: 0;
+        margin: 0.5rem 0 0.5rem 2.5rem;
         padding-right: 0;
 
     }
     .section-link{
         display: block;
-        margin: 0.5rem 0 0.5rem 2.5rem;
+        
     }
     .contact-link{
         padding: 0.5rem 1.5rem;
@@ -521,8 +510,39 @@ contact-link:active{
         font-size: var(--fs-600);
     }
     .view-resume{
+        padding-block: 1rem;
         font-size: var(--fs-300);
         align-self: flex-start;
+    }
+
+    .sections{
+        padding-block: 5rem;
+    }
+    .featured-works-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: repeat(2, 1fr);  */
+        --gap:1rem;
+    }
+    .featured-works-card{
+        border: 1px solid hsl(var(--clr-dark));
+        border-radius: 1rem;
+        padding:1.5rem;
+    }
+    .lets-connect-text{
+        width: 100%;
+        align-self: flex-start;
+        flex-shrink: 1;
+        margin-right: 15rem;
+        text-align: left;
+        
+    }
+    .contact-info{
+        width: 100%;
+    }
+    .bottom-socials{
+        justify-content: flex-start;
+        flex-direction: row;
     }
     
     
