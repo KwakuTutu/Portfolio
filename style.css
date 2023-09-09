@@ -230,8 +230,9 @@ margin-top: var(--flow-space, 2rem);
     font-weight: 600;
     transition: color 0.3s ease;
 }
-.section-link:hover
-{
+.section-link:hover,
+.section-link:focus,
+.section-link:active{
     color: hsl(var(--clr-gold));
 }
 .contact-link{
