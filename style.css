@@ -232,7 +232,7 @@ margin-top: var(--flow-space, 2rem);
 }
 .section-link:hover,
 .section-link:focus,
-.section-link:active{
+{
     color: hsl(var(--clr-gold));
 }
 .contact-link{
