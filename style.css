@@ -230,8 +230,7 @@ margin-top: var(--flow-space, 2rem);
     font-weight: 600;
     transition: color 0.3s ease;
 }
-.section-link:hover,
-.section-link:focus
+.section-link:hover
 {
     color: hsl(var(--clr-gold));
 }
