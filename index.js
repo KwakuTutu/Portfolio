@@ -22,24 +22,37 @@ function closeMenu() {
         navVisible.classList.remove('nav--visible');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+
+
+
+      document.addEventListener('DOMContentLoaded', function() {
         const links = document.querySelectorAll('.section-link');
       
         links.forEach(link => {
           link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            const headerOffset = 30;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition - headerOffset;
-      
-            window.scrollBy({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
+            const href = this.getAttribute('href');
+            
+            if (href && href.startsWith('#')) {
+              // Handle scrolling for internal anchor links
+              event.preventDefault();
+              const target = document.querySelector(href);
+              const headerOffset = 30;
+              const elementPosition = target.getBoundingClientRect().top;
+              const offsetPosition = elementPosition - headerOffset;
+              // Scroll to the target element with custom scroll behavior
+              window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
           });
         });
       });
+      
+
+
+
+
       document.addEventListener('DOMContentLoaded', function() {
         const sections = document.querySelectorAll('.section-animate');
       
