@@ -501,7 +501,7 @@ contact-link:active{
         text-align: left;
     }
     .hero-text h1{
-        font-size: var(--fs-700);
+        font-size: var(--fs-600);
     }
     .hero-text p{
         font-size: var(--fs-400);
